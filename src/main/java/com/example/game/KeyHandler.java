@@ -1,58 +1,30 @@
 package com.example.game;
 
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
-public class KeyHandler implements KeyListener {
+import javafx.event.Event;
+import javafx.event.EventHandler;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 
-    public boolean upPressed, downPressed, leftPressed, rightPressed;
-    private GamePanel gamePanel;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
-    public KeyHandler(GamePanel gamePanel) {
-        this.gamePanel = gamePanel;
 
-    }
+public class KeyHandler implements EventHandler<KeyEvent> {
 
-    public void keyTyped(KeyEvent e) {
-
-    }
+    final private Set<KeyCode> activeKeys = new HashSet<>();
 
     @Override
-    public void keyPressed(KeyEvent e) {
-
-        int code = e.getKeyCode();
-
-        if (code == KeyEvent.VK_W) {
-            upPressed = true;
+    public void handle(KeyEvent event) {
+        if (KeyEvent.KEY_PRESSED.equals(event.getEventType())) {
+            activeKeys.add(event.getCode());
+        } else if (KeyEvent.KEY_RELEASED.equals(event.getEventType())) {
+            activeKeys.remove(event.getCode());
         }
-        if (code == KeyEvent.VK_A) {
-            leftPressed = true;
-        }
-        if (code == KeyEvent.VK_S) {
-            downPressed = true;
-        }
-        if (code == KeyEvent.VK_D) {
-            rightPressed = true;
-        }
-
     }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-        int code = e.getKeyCode();
-        if (code == KeyEvent.VK_W) {
-            upPressed = false;
-        }
-        if (code == KeyEvent.VK_A) {
-            leftPressed = false;
-        }
-        if (code == KeyEvent.VK_S) {
-            downPressed = false;
-        }
-        if (code == KeyEvent.VK_D) {
-            rightPressed = false;
-        }
-
+    public Set<KeyCode> getActiveKeys(){
+        return Collections.unmodifiableSet(activeKeys);
     }
 
 }

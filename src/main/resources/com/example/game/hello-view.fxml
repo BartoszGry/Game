@@ -8,13 +8,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" style="-fx-background-image: url('file:/C:/Users/beneh/intelij/Game/src/main/resources/images/background.png');" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.game.Controller">
    <children>
-      <Button layoutX="280.0" layoutY="124.0" mnemonicParsing="false" onAction="#onHelloButtonClick" text="Start" />
-      <Label fx:id="welcomeText" layoutX="211.0" layoutY="165.0" prefHeight="17.0" prefWidth="178.0" />
-      <Text layoutX="230.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Game" wrappingWidth="140.13671875">
+      <Button layoutX="211.0" layoutY="257.0" mnemonicParsing="false" onAction="#onStartButtonClick" prefHeight="52.0" prefWidth="178.0" styleClass="myButton" stylesheets="@styles.css" text="Start" />
+      <Label layoutX="211.0" layoutY="165.0" prefHeight="17.0" prefWidth="178.0" />
+      <Text layoutX="203.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GIERCA" wrappingWidth="193.13671875">
          <font>
             <Font size="52.0" />
          </font>
       </Text>
-      <Button layoutX="272.0" layoutY="207.0" mnemonicParsing="false" text="Options" />
+      <Button layoutX="213.0" layoutY="562.0" mnemonicParsing="false" styleClass="myButton" stylesheets="@styles.css" text="Options" />
+      <Button layoutX="211.0" layoutY="400.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="178.0" styleClass="myButton" stylesheets="@styles.css" text="Sklep" />
    </children>
 </AnchorPane>

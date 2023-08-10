@@ -1,0 +1,19 @@
+.myButton {
+	--fx-background-color: #2dabf9;
+         -fx-background-radius: 15px;
+         -fx-background-insets: 5 0 0 0, 0;
+         -fx-border-width: 0px;
+         -fx-border-radius: 15px;
+         -fx-text-fill: #ffffff;
+         -fx-font-family: Arial;
+         -fx-font-size: 27px;
+         -fx-padding: 10 40;
+         -fx-cursor: hand;
+         -fx-effect: innershadow( three-pass-box, rgba(41, 187, 255, 0.8), 4, 0, 0, 0 );
+     }
+.myButton:hover {
+	    -fx-background-color: #0688fa;
+}
+.myButton:active {
+	 -fx-translate-y: 1;
+}
