@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 public class GameViewManager {
     private AnchorPane gamePane;
     private Scene gameScene;
-    private Stage gameStage;
+    public Stage gameStage;
     private static final int GAME_WIDTH=600;
     private static final int GAME_HEIGHT=800;
     KeyHandler keyH=new KeyHandler();
@@ -27,9 +27,4 @@ public class GameViewManager {
         gameStage.setScene(gameScene);
     }
 
-    public void createNewGame(Stage menuP){
-        this.menuP=menuP;
-        this.menuP.hide();
-        gameStage.show();
-    }
 }

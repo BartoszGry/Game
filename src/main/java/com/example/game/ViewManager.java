@@ -10,7 +10,6 @@ import java.io.IOException;
 public class ViewManager {
     private static final int HEIGHT=800;
     private static final int WIDTH=600;
-
     private AnchorPane mainPane;
     private Scene mainScene;
     private Stage mainStage;
@@ -37,7 +36,8 @@ public class ViewManager {
     }
     public void createGameView(){
         gameView=new GameViewManager();
-        gameView.createNewGame(mainStage);
+        gameView.gameStage.show();
+
     }
 
 }
