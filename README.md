@@ -13,8 +13,16 @@ The inspiration for creating a 2D treasure hunter game comes from games of the 9
 # User Manual , Purpose and Game Rules
 
  The game is simple and undemanding, designed for anyone who would like to try conquering the labyrinth and achieve the best possible time score. The player's task is to collect three gold coins hidden in the deepest chamber. The game is user-friendly and easy to grasp for beginners, yet challenging for those aiming for the best time score. It provides excitement and fun, allowing the development of reflexes and motor coordination.
+
+ 
+ ![Gold coins](https://i.imgur.com/32JUYtm.png)
+ 
  
 Adding difficulty to the task are enemies strategically placed on the map shooting projectiles sideways. The player must avoid these enemies, collect keys, and use them to open doors.
+![Geme view ](https://i.imgur.com/3OtJ0qn.png)
+
+As players progress through the labyrinth, they will encounter different enemy types and door-color combinations, requiring adaptability and quick thinking. The combination of collecting gold coins, avoiding enemies, and strategically using keys to unlock doors adds depth to the gameplay.
+
 
 ## Controls
 
@@ -39,3 +47,5 @@ To launch the application, follow these steps:
 4. Unzip the project file.
 5. Import the project into IDE by selecting the folder where the unzipped project file is located.
 6. Press the green RUN button in the top window.
+
+
