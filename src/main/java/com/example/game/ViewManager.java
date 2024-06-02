@@ -37,7 +37,6 @@ public class ViewManager {
     public void createGameView(){
         gameView=new GameViewManager();
         gameView.gameStage.show();
-
     }
 
 }
