@@ -12,7 +12,7 @@ import java.util.Set;
 
 public class GameViewManager {
     private AnchorPane gamePane;
-    private Group level;
+
     boolean goLeft,goRight,idle;
     public Player player;
     private Scene gameScene;
@@ -27,7 +27,7 @@ public class GameViewManager {
 
     public GameViewManager(){
         initializeStage();
-        setPlayer();
+        setLevel();
         gameScene.setOnKeyPressed(keyH);
         gameScene.setOnKeyReleased(keyH);
         gameLoop=createGameLoop();
@@ -47,10 +47,8 @@ public class GameViewManager {
 
 
 
-    public void setPlayer(){
-        player=gameState.getPlayer();
-        level=new Group(player);
-        gamePane.getChildren().add(level);
+    public void setLevel(){
+        gamePane.getChildren().add(gameState.getLevel());
     }
     public void initializeStage(){
         gamePane=new AnchorPane();

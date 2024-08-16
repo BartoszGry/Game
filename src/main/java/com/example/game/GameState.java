@@ -4,10 +4,12 @@ import com.example.entity.Enemy;
 import com.example.entity.Player;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.Group;
 
 public class GameState {
     private ObservableList<Enemy> enemies;
     private Player player;
+    private Group level;
     private boolean gameOver;
 
     public GameState() {
@@ -15,9 +17,10 @@ public class GameState {
     }
 
     public void init() {
-        player = new Player();
         enemies = FXCollections.observableArrayList();
         gameOver=false;
+        player = new Player();
+        level=new Group(player);
     }
 
     public boolean isGameOver() {
@@ -25,6 +28,11 @@ public class GameState {
     }
     public void setGameOver(boolean gameOver) {
         this.gameOver = gameOver;
+    }
+
+
+    public Group getLevel() {
+        return level;
     }
 
     public Player getPlayer() {
