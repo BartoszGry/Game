@@ -9,6 +9,8 @@ public class Player extends ImageView {
     public final static double speed=2;
     private int layoutX=252;
     private int layoutY=650;
+    private final int width=1;
+    private final int height=1;
     public Player() {
         super();
         this.spaceShipImg=new Image(SHIP_IMAGE_LOC);
@@ -17,6 +19,13 @@ public class Player extends ImageView {
         setLayoutY(layoutY);
     }
 
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
 
     public void setLayoutX(int layoutX) {
         this.layoutX = layoutX;

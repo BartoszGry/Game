@@ -8,7 +8,7 @@ import java.io.IOException;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        ViewManager manager= new ViewManager();
+        MainMenuViewManager manager= new MainMenuViewManager();
         manager.setMainMenu();
         stage=manager.getMainStage();
         stage.show();

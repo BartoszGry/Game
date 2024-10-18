@@ -7,17 +7,17 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ViewManager {
+public class MainMenuViewManager {
     private static final int HEIGHT=800;
     private static final int WIDTH=600;
     private AnchorPane mainPane;
     private Scene mainScene;
     private Stage mainStage;
     GameViewManager gameView;
-    Controller controller;
+    MainMenuButtonController controller;
 
 
-    public ViewManager() {
+    public MainMenuViewManager() {
       mainPane=new AnchorPane();
       mainScene=new Scene(mainPane,WIDTH,HEIGHT);
       mainStage=new Stage();

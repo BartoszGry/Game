@@ -24,15 +24,19 @@ public class GameViewManager {
     private GameState gameState=new GameState();
     private UpdateHandler updateHandler=new UpdateHandler(gameState);
 
-
     public GameViewManager(){
-        initializeStage();
-        setLevel();
+        gamePane=new AnchorPane();
+        gameScene= new Scene(gamePane,GAME_WIDTH,GAME_HEIGHT);
+        gameStage=new Stage();
+        gameStage.setScene(gameScene);
+        gamePane.getChildren().add(gameState.getLevel());
         gameScene.setOnKeyPressed(keyH);
         gameScene.setOnKeyReleased(keyH);
         gameLoop=createGameLoop();
         gameLoop.start();
     }
+
+
 
     private AnimationTimer createGameLoop() {
         return new AnimationTimer() {
@@ -44,18 +48,5 @@ public class GameViewManager {
             }
         };
     }
-
-
-
-    public void setLevel(){
-        gamePane.getChildren().add(gameState.getLevel());
-    }
-    public void initializeStage(){
-        gamePane=new AnchorPane();
-        gameScene= new Scene(gamePane,GAME_WIDTH,GAME_HEIGHT);
-        gameStage=new Stage();
-        gameStage.setScene(gameScene);
-    }
-
 
 }

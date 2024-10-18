@@ -5,12 +5,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
 
-public class Controller {
+public class MainMenuButtonController {
     @FXML
     private Label welcomeText;
     @FXML
     private Button startButton;
-    ViewManager viewManager=new ViewManager();
+    MainMenuViewManager viewManager=new MainMenuViewManager();
     @FXML
     protected void onStartButtonClick()  {
         viewManager.createGameView();
