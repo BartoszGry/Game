@@ -11,6 +11,7 @@ public class GameState {
     private Player player;
     private Group level;
     private boolean gameOver;
+    private EnemyManager enemyManager;
 
     public GameState() {
         init();
@@ -21,6 +22,10 @@ public class GameState {
         gameOver=false;
         player = new Player();
         level=new Group(player);
+        enemyManager=new EnemyManager();
+
+        enemyManager.addEnemies(14);//todo dev usunac to
+        level.getChildren().addAll(enemyManager.getEnemies());
     }
 
     public boolean isGameOver() {
@@ -38,4 +43,9 @@ public class GameState {
     public Player getPlayer() {
         return player;
     }
+
+    public EnemyManager getEnemyManager() {
+        return enemyManager;
+    }
+
 }

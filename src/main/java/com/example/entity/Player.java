@@ -9,21 +9,25 @@ public class Player extends ImageView {
     public final static double speed=2;
     private int layoutX=252;
     private int layoutY=650;
-    private final int width=1;
-    private final int height=1;
+    private final double width=50;
+    private final double height=50;
+
+
     public Player() {
         super();
         this.spaceShipImg=new Image(SHIP_IMAGE_LOC);
         setImage(spaceShipImg);
         setLayoutX(layoutX);
         setLayoutY(layoutY);
+        setFitWidth(width);
+        setFitHeight(height);
     }
 
-    public int getWidth() {
+    public double getWidth() {
         return width;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 

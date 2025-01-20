@@ -12,19 +12,17 @@ import java.util.Set;
 
 public class GameViewManager {
     private AnchorPane gamePane;
-
-    boolean goLeft,goRight,idle;
-    public Player player;
     private Scene gameScene;
     public Stage gameStage;
-    private static final int GAME_WIDTH=600;
-    private static final int GAME_HEIGHT=800;
-    KeyHandler keyH = new KeyHandler();
-    private AnimationTimer gameLoop;
-    private GameState gameState=new GameState();
-    private UpdateHandler updateHandler=new UpdateHandler(gameState);
+    public static final int GAME_WIDTH=600;
+    public static final int GAME_HEIGHT=800;
+    KeyHandler keyH = new KeyHandler();//todo przeniesc do game satte
+
+    private GameState gameState;
+    private UpdateHandler updateHandler;
 
     public GameViewManager(){
+        gameState=new GameState();
         gamePane=new AnchorPane();
         gameScene= new Scene(gamePane,GAME_WIDTH,GAME_HEIGHT);
         gameStage=new Stage();
@@ -32,21 +30,12 @@ public class GameViewManager {
         gamePane.getChildren().add(gameState.getLevel());
         gameScene.setOnKeyPressed(keyH);
         gameScene.setOnKeyReleased(keyH);
-        gameLoop=createGameLoop();
-        gameLoop.start();
+        updateHandler=new UpdateHandler(gameState, keyH);
+
     }
 
 
 
-    private AnimationTimer createGameLoop() {
-        return new AnimationTimer() {
-            public void handle(long now) {
-                updateHandler.update(keyH.getActiveKeys());
-//                if (gameState.isGameOver()) {
-//                    this.stop();
-//                }
-            }
-        };
-    }
+
 
 }
