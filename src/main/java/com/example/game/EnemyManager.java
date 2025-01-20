@@ -48,7 +48,7 @@ public class EnemyManager {
     public void addEnemy(){
         Enemy enemy=new Enemy();
         this.enemies.add(enemy);
-        this.enemyGroup.getChildren().add(enemy);
+     //   this.enemyGroup.getChildren().add(enemy);
     }
 
     public void updateLayoutForEnemies() {

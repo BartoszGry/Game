@@ -17,10 +17,11 @@ public class Player extends ImageView {
         super();
         this.spaceShipImg=new Image(SHIP_IMAGE_LOC);
         setImage(spaceShipImg);
-        setLayoutX(layoutX);
-        setLayoutY(layoutY);
+
         setFitWidth(width);
         setFitHeight(height);
+        setLayoutX(layoutX);
+        setLayoutY(layoutY);
     }
 
     public double getWidth() {
